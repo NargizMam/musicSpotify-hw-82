@@ -10,12 +10,14 @@ const AlbumsSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId,
         ref: 'Artist',
         require: true,
-        validator: async (value: mongoose.Types.ObjectId)=> await Artist.findById(value),
-        message: "Artist does not exist!"
+        validate:{
+            validator: async (value: mongoose.Types.ObjectId)=> await Artist.findById(value),
+            message: "Artist does not exist!",
+        }
     },
-    publishedAt: {
-        type: String,
-         require: true
+    createdAt: {
+        type: Number,
+        require: true
     },
     image: String
 });

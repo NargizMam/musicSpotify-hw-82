@@ -14,7 +14,7 @@ artistsRouter.get('/', async (req, res) => {
         return res.sendStatus(500);
     }
 });
-artistsRouter.post('/', imagesUpload.single('images'), async (req, res, next) => {
+artistsRouter.post('/', imagesUpload.single('image'), async (req, res, next) => {
     try{
         if(!req.body.name){
             res.status(400).send({"error": "Field name is required!"})
@@ -22,11 +22,11 @@ artistsRouter.post('/', imagesUpload.single('images'), async (req, res, next) =>
     const artistsData: ArtistMutation = {
         name: req.body.name,
         info: req.body.info,
-        photo: req.file ? req.file.filename : null,
+        image: req.file ? req.file.filename : null,
     };
     const artist = new Artist(artistsData);
         await artist.save();
-        return res.send(artist);
+        res.send(artist);
     }catch (e) {
         if(e instanceof mongoose.Error.ValidationError){
             res.sendStatus(400).send(e)

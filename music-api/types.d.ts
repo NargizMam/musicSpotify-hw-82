@@ -1,12 +1,12 @@
 export interface ArtistMutation {
     name: string,
-    photo: string | null,
+    image: string | null,
     info: string |null
 }
 export interface AlbumMutation {
-    artist: string;
     title: string;
-    publishedAt: number;
+    artist: string;
+    createdAt: number;
     image: string | null;
 }
 export interface TrackMutation {
