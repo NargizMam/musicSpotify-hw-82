@@ -1,7 +1,6 @@
 import React from 'react';
-import {Container, CssBaseline} from "@mui/material";
-import {Route, Routes} from "react-router-dom";
-
+import { Container, CssBaseline } from '@mui/material';
+import { Routes } from 'react-router-dom';
 
 
 function App() {

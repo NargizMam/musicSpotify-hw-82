@@ -2,10 +2,11 @@ import express from "express";
 import Track from "../models/Tracks";
 import mongoose from "mongoose";
 import {TrackMutation} from "../types";
+import Album from "../models/Albums";
 
 const tracksRouter = express.Router();
 
-tracksRouter.get('/', async (req, res, next) => {
+tracksRouter.get('/', async (req, res) => {
     let track;
     try{
         if(req.query.album){

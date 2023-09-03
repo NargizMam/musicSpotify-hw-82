@@ -24,7 +24,7 @@ albumsRouter.get('/:id',async (req, res) => {
 
         const result = await Album.find({artist: req.params.id})
             .populate('artist', 'name')
-            .sort({"releaseAt": -1});
+            .sort({"createdAt": -1});
         if (!result) {
             return res.sendStatus(404);
         }
