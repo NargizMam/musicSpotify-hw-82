@@ -22,5 +22,5 @@ export interface IUser {
 export interface ITrackHistory {
     user: string;
     track: string;
-    datetime: string;
+    datetime?: string;
 }
