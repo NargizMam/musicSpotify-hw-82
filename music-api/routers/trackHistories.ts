@@ -24,7 +24,7 @@ trackHistoriesRouter.post('/', async (req, res, next) => {
         user: user._id.toString(),
         track: track.id,
     }
-    console.log(req.body.track, historyData);
+
     const trackHistory = new TrackHistory(historyData);
     try{
         await trackHistory.save();
