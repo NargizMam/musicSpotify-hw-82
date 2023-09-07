@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import Artist from "../models/Artists";
+import Artist from "../models/Artist";
 import {ArtistMutation} from "../types";
 import {imagesUpload} from "../multer";
 

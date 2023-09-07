@@ -1,8 +1,8 @@
 import express from "express";
-import Track from "../models/Tracks";
+import Track from "../models/Track";
 import mongoose from "mongoose";
 import {TrackMutation} from "../types";
-import Album from "../models/Albums";
+import Album from "../models/Album";
 
 const tracksRouter = express.Router();
 

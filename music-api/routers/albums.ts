@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import {AlbumMutation} from "../types";
 import {imagesUpload} from "../multer";
-import Album from "../models/Albums";
+import Album from "../models/Album";
 
 const albumsRouter = express.Router();
 

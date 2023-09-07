@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Album from "./Albums";
+import Album from "./Album";
 
 const TrackSchema = new mongoose.Schema({
     title: {
